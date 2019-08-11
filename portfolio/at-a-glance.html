@@ -65,15 +65,19 @@ body, html {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-card" id="myNavbar">
-     <a href="#about" class="w3-bar-item w3-button w3-hover-text-red w3-hover-white" style="color:dimgrey"><i class="far fa-address-book"></i> ABOUT</a>
-      <a href="#resume" class="w3-bar-item w3-button w3-hover-text-red w3-hover-white" style="color:dimgrey"><i class="far fa-file"></i> RESUME</a>
       <a href="#contact" class="w3-bar-item w3-button w3-hover-text-red w3-hover-white" style="color:dimgrey"><i class="far fa-paper-plane"></i> CONTACT</a>
-    <!-- Right-sided navbar links -->
+   <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="portfolio" class="w3-bar-item w3-button w3-hover-text-dimgrey w3-hover-white" style="color:red"> <i class="fa fa-th"></i> PORTFOLIO <i class="fas fa-caret-right"></i></a>
-      <a href="#work" class="w3-bar-item w3-button w3-hover-text-dimgrey w3-hover-white" style="color:red"><i class="fa fa-lightbulb"></i>  Lighting</a>
-      <a href="#resume" class="w3-bar-item w3-button w3-hover-text-dim grey w3-hover-white" style="color:red"><i class="fas fa-hammer"></i> Set</a>
-      <a href="#contact" class="w3-bar-item w3-button w3-hover-text-dim grey w3-hover-white" style="color:red"><i class="far fa-play-circle"></i> Audio & Film</a> 	    
+     <a href="#resume" class="w3-bar-item w3-button w3-hover-text-red w3-hover-white" style="color:dimgrey"><i class="far fa-file"></i> RESUME</a>
+     <div class="w3-dropdown-hover">
+      <button class="w3-button"><i class="fa fa-th"></i>PORTFOLIO</button>
+       <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button w3-hover-text-red w3-hover-white" style="color:dimgrey"><i class="fas fa-star"></i>HIGHLIGHTS</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-text-red w3-hover-white" style="color:dimgrey"><i class="fas fa-hammer"></i> SET</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-text-red w3-hover-white" style="color:dimgrey"><i class="fa fa-lightbulb"></i>  LIGHTING</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-text-red w3-hover-white" style="color:dimgrey"><i class="far fa-play-circle"></i> AUDIO & FILM</a>
+      </div>
+     </div>
     </div>
     
     <!-- Hide right-floated links on small screens and replace them with a menu icon -->
@@ -107,7 +111,7 @@ body, html {
 
 <!-- About Section -->
 <div class="w3-container" style="padding:11px 11px id="about">
- <body class="w3-content" style="max-width:928px">
+ <div>
   <h3 class="w3-center">ABOUT</h3>
   <p class="w3-center w3-large">highlights</p>
    <div>
@@ -284,7 +288,7 @@ body, html {
       <iframe width="928" height="522" src="https://www.youtube.com/embed/AKEYloLZoN0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
      </div>
    </div>
- </body>
+ </div>
 </div>
 
 <!-- Footer -->
