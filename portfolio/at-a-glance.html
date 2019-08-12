@@ -110,10 +110,28 @@ body, html {
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-red w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-  <a href="#resume" onclick="w3_close()" class="w3-bar-item w3-button">RESUME</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  <a href="#about" class="w3-bar-item w3-button">CONTACT</a>
+  <a href="#resume" class="w3-bar-item w3-button">RESUME</a>
+  <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+  <button onclick="myFunction('sidebar1')" class="w3-btn w3-block "><i class="fas fa-caret-square-down"></i>   PORTFOLIO  </button>
+      <div id="sidebar1" class="w3-container w3-hide">
+        <a href="#" class="w3-bar-item w3-button>Highlights</a>
+        <a href="#" class="w3-bar-item w3-button>Set</a>
+        <a href="#" class="w3-bar-item w3-button>Lighting</a>
+        <a href="#" class="w3-bar-item w3-button>Audio & Film</a>
+      </div>
+
+ <script>
+ function myFunction(id) {
+       var x = document.getElementById(id);
+       if (x.className.indexOf("w3-show") == -1) {
+         x.className += " w3-show";
+       } else { 
+         x.className = x.className.replace(" w3-show", "");
+       }
+     }
+     </script>
+     
 </nav>
 
 <!-- About Section -->
