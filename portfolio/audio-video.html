@@ -72,6 +72,41 @@ body, html {
   text-align: left;
   color: Crimson;
 }
+</style>
+<style>.skill-small { 
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-variant: small-caps;
+  line-height: 2;
+  text-shadow: 2px 2px Thistle;
+}
+</style>
+<style>.show-small { 
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1;
+}
+</style>
+<style>.position-small { 
+  font-size: 16px;
+  line-height: 1;
+  Color: SlateGrey;
+}
+</style>
+<style>.caption-small { 
+  font-style: italic;
+  font-size: 12px;
+  text-align: right;
+  color: Crimson;
+}
+</style>
+<style>.caption-l-small { 
+  font-style: italic;
+  font-size: 12px;
+  text-align: left;
+  color: Crimson;
+}
 .videoWrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
@@ -89,7 +124,6 @@ body, html {
 </head>
 <body data-gr-c-s-loaded="true">
 
-<!-- Navbar (sit on top) -->
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-card" id="myNavbar">
@@ -112,7 +146,7 @@ body, html {
 </div>
 
 <!-- About Section -->
-<div class="w3-container" style="padding:60px 60px" id="about">
+<div class="w3-container w3-hide-small" style="padding:100px 50px" id="about">
  <div>
   <div class="w3-card w3-pale-red" id="home">
     <h3 class="w3-center">PORTFOLIO: FILM & AUDIO</h3>
@@ -150,6 +184,47 @@ body, html {
    </div> 
  </div>
 </div>
+
+<!-- About Section Mobile-->
+<div class="w3-container w3-hide-medium w3-hide-large" style="padding:70px 20px" id="about">
+ <div>
+  <div class="w3-card w3-pale-red" id="home">
+    <h3 class="w3-center">PORTFOLIO: FILM & AUDIO</h3>
+    <p class="w3-center w3-medium">My work in audio-video production and editing for film, podcast, and stage. Click for other work:<br>
+    <a href="/portfolio/highlights" class="w3-bar-item w3-button w3-hover-text-blue w3-hover-pale-red"><i class="fas fa-star"></i>  Highlights</a> | <a href="/portfolio/lighting" class="w3-bar-item w3-button w3-hover-text-amber w3-hover-pale-red"><i class="fa fa-lightbulb"></i>  Lighting</a> | <a href="/portfolio/set" class="w3-bar-item w3-button w3-hover-text-green w3-hover-pale-red" ><i class="fas fa-hammer"></i> Set</a></p>
+  </div>
+
+<!-- Film & Audio -->
+   <div>
+    <a class="skill-small"><i class="fas fa-film"></i> Video Editing and Production</a>
+     <div>   
+      <p class="caption-small">Mask and Wig's 129th Year</a></br>
+      <a class="position-small">Editor - Summer 2017</a></br>
+      <div class="videoWrapper">
+       <iframe width="928" height="522" src="https://www.youtube.com/embed/mVeYdIGFL6c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+      </div>
+      <p class="caption-small"><a href="http://www.maskandwig.com/">The Mask and Wig Club</a>: Videography by the 2016-2017 company.</p></br>
+     </div>
+     <div>
+     <a class="show-small">Tiny Instruments EP 4: SHIVA</a></br>
+      <a class="position-small">Production Assistant - Summer 2017 </a>
+      <div class="videoWrapper">
+       <iframe width="928" height="522" src="https://www.youtube.com/embed/AKEYloLZoN0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="caption-small">Directed by Josh Horowitz, Photography Direction by Tyler Burke.</p>
+     </div>
+   </div>
+   <div>
+    <a class="skill-small"><i class="fas fa-microphone-alt"></i> Theatrical and Studio Audio Editing and Production</a>
+     <div>
+      <a class="show-small">Two-Man One-Man</a></br>
+      <a class="position-small">Sound Designer - Summer 2017, Spring 2018</a></br>
+      <a class="caption-l-small">Philadelphia Fringe, <a><a class="caption-l-small"href="https://www.broadstreetreview.com/theater/comedysportz-presents-patrick-romano-and-benjamin-behrends-two-man-one-man#">ComedySportz Philly</a><a class="caption-l-small">, Edinburgh Fringe: Created by Patrick Romano and Benjamin Behrends.</a></br>
+     </div>
+   </div> 
+ </div>
+</div>
+
 
 <!-- Footer -->
 <footer class="w3-center w3-padding-24 w3-flat-midnight-blue">
