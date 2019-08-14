@@ -37,7 +37,18 @@ body, html {
   padding: 16px;
   
 }
+
 </style>
+<script>
+function dropdown() {
+  var x = document.getElementById("Menu");
+  if (x.className.indexOf("w3-show") == -1) {  
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
 <style>.skill { 
   font-size: 35px;
   font-family: Arial, Helvetica, sans-serif;
@@ -95,9 +106,18 @@ body, html {
   <div class="w3-bar w3-white w3-card" id="myNavbar">
       <a href="/about" class="w3-bar-item w3-button w3-hover-text-orange w3-hover-white" style="color:dimgrey"><i class="fas fa-address-book"></i></i> ABOUT ME</a>
       <a href="/resume" class="w3-bar-item w3-button w3-hover-text-purple w3-hover-white" style="color:dimgrey"><i class="fas fa-file-alt"></i> RESUME</a>
-       <div class="w3-dropdown-hover">
+       <div class="w3-hide-small w3-hide-medium w3-dropdown-hover">
         <button class="w3-button" style="color:dimgrey"><i class="fas fa-caret-square-down"></i>   PORTFOLIO  </button>
          <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="/portfolio/highlights" class="w3-bar-item w3-button w3-hover-text-blue w3-hover-white" style="color:dimgrey"><i class="fas fa-star"></i> Highlights</a>
+          <a href="/portfolio/lighting" class="w3-bar-item w3-button w3-hover-text-amber w3-hover-white" style="color:dimgrey"><i class="fa fa-lightbulb"></i>  Lighting</a>
+          <a href="/portfolio/set" class="w3-bar-item w3-button w3-hover-text-green w3-hover-white" style="color:dimgrey"><i class="fas fa-hammer"></i> Set</a>
+          <a href="/portfolio/audio-video" class="w3-bar-item w3-button w3-hover-text-red w3-hover-white" style="color:dimgrey"><i class="fas fa-play-circle"></i> Film & Audio</a>
+        </div>
+    </div>
+    <div class="w3-hide-large w3-dropdown-click">
+        <button onclick="dropdown()" class="w3-button" style="color:dimgrey"><i class="fas fa-caret-square-down"></i>   PORTFOLIO  </button>
+         <div id="Menu" class="w3-dropdown-content w3-bar-block w3-card-4">
           <a href="/portfolio/highlights" class="w3-bar-item w3-button w3-hover-text-blue w3-hover-white" style="color:dimgrey"><i class="fas fa-star"></i> Highlights</a>
           <a href="/portfolio/lighting" class="w3-bar-item w3-button w3-hover-text-amber w3-hover-white" style="color:dimgrey"><i class="fa fa-lightbulb"></i>  Lighting</a>
           <a href="/portfolio/set" class="w3-bar-item w3-button w3-hover-text-green w3-hover-white" style="color:dimgrey"><i class="fas fa-hammer"></i> Set</a>
