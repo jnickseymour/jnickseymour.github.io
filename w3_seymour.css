@@ -232,3 +232,4 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-border-pale-yellow,.w3-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.w3-border-pale-blue,.w3-hover-border-pale-blue:hover{border-color:#e7ffff!important}
 /* My edits for jnickseymour.com */
 .skill {font-size: 35px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-variant: small-caps; line-height: 2; text-shadow: 2px 2px LightBlue}
+@media (max-width:600px) {.skill { font-size: 28px; }}
