@@ -233,11 +233,20 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 /* My edits for jnickseymour.com */
 .skill {font-size: 35px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-variant: small-caps; line-height: 2; text-shadow: 2px 2px LightBlue}
 @media (max-width:600px) {.skill { font-size: 28px; }}
-<style>.show { font-style: italic;font-size: 25px;line-height: 1;}
+
+.show { font-style: italic;font-size: 25px;line-height: 1;}
 @media (max-width:600px) {.show { font-size: 20px; }}
+
 .position { font-size: 20px;line-height: 1;Color: SlateGrey;}
 @media (max-width:600px) {.position { font-size: 16px; }}
+
 .caption { font-style: italic;font-size: 15px;text-align: right;color: SteelBlue;}
 @media (max-width:600px) {.caption { font-size: 12px; }}
+
 .caption-l { font-style: italic;font-size: 15px;text-align: left;color: SteelBlue;}
 @media (max-width:600px) {.caption-1 { font-size: 12px; }}
+
+body, html {height: 100%;line-height: 1.8;color: dimgrey;}
+.w3-bar .w3-button {padding: 16px;}
+.videoWrapper {position: relative;padding-bottom: 56.25%; /* 16:9 */ padding-top: 25px; height: 0;}
+.videoWrapper iframe {position: absolute;top: 0;left: 0;width: 100%; height: 100%;}
