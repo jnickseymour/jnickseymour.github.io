@@ -21,7 +21,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Cairo", sans-serif}
 .caption-l {color: hsl(120, 80%, 20%)}
 .caption {color: hsl(120, 80%, 20%)}
 .skill {text-shadow: 2px 2px hsl(120, 80%, 80%)}
-
+.mySlides {display:none; margin-left: auto;margin-right: auto}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
 </style>
 
 </head>
@@ -77,10 +79,25 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Cairo", sans-serif}
      </div>
      <div>
       <a class="show">Peter and The Starcatcher</a></br>
-      <a class="position">Set Designer, Crew - Fall 2018</a></br>
-      <IMG SRC="/media/PATSC_1.jpg"style="width:66.667%"><IMG SRC="/media/PATSC_2.jpg" style="width:33.333%">
-      <IMG SRC="/media/PATSC_3.jpg" style="width:50%"><IMG SRC="/media/PATSC_4.jpg" style="width:50%">
-      <IMG SRC="/media/PATSC_5.jpg" style="width:50%"><IMG SRC="/media/PATSC_6.jpg" style="width:50%">
+      <a class="position">Set Designer, Crew - Fall 2018</a></br>   
+     <div class="w3-content w3-display-container">
+      <IMG class="mySlides"SRC="https://jnickseymour.com/media/PATSC_1.jpg"style="width:100%">
+      <IMG class="mySlides"SRC="https://jnickseymour.com/media/PATSC_2.jpg" style="width:87.5%">
+      <IMG class="mySlides" SRC="https://jnickseymour.com/media/PATSC_3.jpg" style="width:100%">
+      <IMG class="mySlides" SRC="https://jnickseymour.com/media/PATSC_4.jpg" style="width:100%">
+      <IMG class="mySlides" SRC="https://jnickseymour.com/media/PATSC_5.jpg" style="width:100%">
+      <IMG class="mySlides" SRC="https://jnickseymour.com/media/PATSC_6.jpg" style="width:100%">
+       <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+        <div class="w3-left w3-hover-text-khaki" style="color:hsl(120, 80%, 20%)" onclick="plusDivs(-1)">&#10094;</div>
+        <div class="w3-right w3-hover-text-khaki" style="color:hsl(120, 80%, 20%)" onclick="plusDivs(1)">&#10095;</div>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(5)"></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(6)"></span>
+       </div>
+     </div>
       <p class="caption"><a href="http://www.quadramics.com/">Quadramics Theatre Company</a>: Directed by Elizabeth Maritnez, Master Carpenter Sabina Lowitt, Photos by Idil Demirdag.</p></br>
      </div>
      <div>
@@ -183,6 +200,33 @@ function dropdown() {
   } else { 
     x.className = x.className.replace(" w3-show", "");
   }
+}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
 }
 </script>
 
