@@ -21,7 +21,63 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Cairo", sans-serif}
 .caption-l {color: hsl(180, 80%, 20%)}
 .caption {color: hsl(180, 80%, 20%)}
 .skill {text-shadow: 2px 2px hsl(180, 80%, 80%)}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.ocontainer {
+  position: relative;
+  width: 100%; 
+}
 
+.oimage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.ocontainer:hover .overlay {
+  width: 100%;
+  left: 0;
+}
+
+.otext {
+  color: white;
+  font-size: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+@media (max-width:992px) and (min-width:601px){.otext { font-size: 40px }}
+@media (max-width:600px) {.otext { font-size: 33px }}
+@media (min-width:601px){.column { width: 33.333% }}
 </style>
 
 </head>
@@ -60,23 +116,66 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Cairo", sans-serif}
  
 <!-- About Section -->
 <div class="w3-container-ns" id="about">
-<div>
-  <div class="w3-card w3-light-grey" id="home">
-    <h3 class="w3-center">HOME</h3>
-    <p class="w3-center w3-large">Learn about Nick:<br>
-    <a href="/about" class="w3-bar-item w3-button w3-hover-text-orange w3-hover-light-grey"><i class="fas fa-address-book"></i></i> About</a> | <a href="/resume" class="w3-bar-item w3-button w3-hover-text-purple w3-hover-light-grey"><i class="fas fa-file-alt"></i> Resum&eacute;</a></br>View portfolio:</br>
-    <a href="/portfolio/highlights" class="w3-bar-item w3-button w3-hover-text-blue w3-hover-light-grey"><i class="fas fa-star"></i>  Highlights</a> | <a href="/portfolio/lighting" class="w3-bar-item w3-button w3-hover-text-amber w3-hover-light-grey"><i class="fa fa-lightbulb"></i>  Lighting</a> | <a href="/portfolio/set" class="w3-bar-item w3-button w3-hover-text-green w3-hover-light-grey"><i class="fas fa-hammer"></i> Set</a> | <a href="/portfolio/audio-video" class="w3-bar-item w3-button w3-hover-text-red w3-hover-light-grey"><i class="fas fa-play-circle"></i> Film & Audio</a></p>
+ <div class="w3-card w3-light-grey" id="home">
+  <h3 class="w3-center">HOME</h3>
+  <p class="w3-center w3-large">Learn about Nick:<br>
+  <a href="/about" class="w3-bar-item w3-button w3-hover-text-orange w3-hover-light-grey"><i class="fas fa-address-book"></i></i> About</a> | <a href="/resume" class="w3-bar-item w3-button w3-hover-text-purple w3-hover-light-grey"><i class="fas fa-file-alt"></i> Resum&eacute;</a></br>View portfolio:</br>
+  <a href="/portfolio/highlights" class="w3-bar-item w3-button w3-hover-text-blue w3-hover-light-grey"><i class="fas fa-star"></i>  Highlights</a> | <a href="/portfolio/lighting" class="w3-bar-item w3-button w3-hover-text-amber w3-hover-light-grey"><i class="fa fa-lightbulb"></i>  Lighting</a> | <a href="/portfolio/set" class="w3-bar-item w3-button w3-hover-text-green w3-hover-light-grey"><i class="fas fa-hammer"></i> Set</a> | <a href="/portfolio/audio-video" class="w3-bar-item w3-button w3-hover-text-red w3-hover-light-grey"><i class="fas fa-play-circle"></i> Film & Audio</a></p>
+ </div>
+ <div class="w3-card">
+  <div class="row">
+   <div class="column">
+        <div class="ocontainer" style="clear:left">
+     <img src="/media/jnickseymour-square.jpg" class="oimage">
+     <div class="overlay" style="background-color: rgba(255, 128, 0, 0.2)">
+      <div class="otext"><a href="/about" class="w3-bar-item w3-button w3-hover-text-orange w3-hover-none" style="color:white"><i class="fas fa-address-book"></i></i> ABOUT ME</a></div>
+     </div>
+    </div>
+   </div>
+   <div class="column">
+    <div class="ocontainer">
+     <img src="/media/resume-square.jpg" class="oimage">
+     <div class="overlay" style="background-color: rgba(255, 0, 255, 0.2)">
+      <div class="otext"><a href="/resume" class="w3-bar-item w3-button w3-hover-text-purple w3-hover-none" style="color:white"><i class="fas fa-file-alt"></i> RESUME</a></div>
+     </div>
+    </div>
+   </div>
+   <div class="column">
+        <div class="ocontainer" style="clear:left">
+     <img src="/media/highlights-square.jpg" class="oimage">
+     <div class="overlay" style="background-color: rgba(0, 0, 255, 0.2)">
+      <div class="otext"><a href="/portfolio/highlights" class="w3-bar-item w3-button w3-hover-text-blue w3-hover-none" style="color:white"><i class="fas fa-star"></i> HIGHLIGHTS</a></div>
+     </div>
+    </div>
+   </div>
+   <div class="column">
+    <div class="ocontainer">
+     <img src="/media/lighting-square.gif" class="oimage">
+     <div class="overlay" style="background-color: rgba(255, 255, 0, 0.2)">
+      <div class="otext"><a href="/portfolio/lighting" class="w3-bar-item w3-button w3-hover-text-amber w3-hover-none" style="color:white"><i class="fa fa-lightbulb" font-size: 50px></i></br>LIGHTING</a></div>
+     </div>
+    </div>
+   </div>
+   <div class="column">
+    <div class="ocontainer" style="clear:left">
+     <img src="/media/set-square.jpg" class="oimage">
+     <div class="overlay" style="background-color: rgba(0, 255, 255, 0.2)">
+      <div class="otext"><a href="/portfolio/set" class="w3-bar-item w3-button w3-hover-text-green w3-hover-none" style="color:white"><i class="fas fa-hammer"></i> SET</a></div>
+     </div>
+    </div>
+   </div>
+   <div class="column">
+    <div class="ocontainer">
+     <img src="/media/audio-video-square.gif" class="oimage">
+     <div class="overlay" style="background-color: rgba(255, 0, 0, 0.2)">
+      <div class="otext"><a href="/portfolio/audio-video" class="w3-bar-item w3-button w3-hover-text-red w3-hover-none" style="color:white"><i class="fas fa-play-circle"></i> FILM & AUDIO</a></div>
+     </div>
+    </div>
+   </div>
   </div>
  </div>
-
-</br></br>
-</br></br>
-</br></br>
-</br></br>
-</br></br>
-
-</br>
 </div>
+
 
 <!-- Footer -->
 <footer class="w3-center w3-padding-24 w3-flat-midnight-blue">
