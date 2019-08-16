@@ -141,8 +141,8 @@ img {vertical-align: middle;}
     <img SRC="/media/PATSC_6.jpg" style="width:100%">
   </div>
 
-  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
 </div>
       <p class="caption"><a href="http://www.quadramics.com/">Quadramics Theatre Company</a>: Directed by Elizabeth Maritnez, Master Carpenter Sabina Lowitt, Photos by Idil Demirdag.</p></br>
      </div>
@@ -208,15 +208,14 @@ img {vertical-align: middle;}
     <img SRC="/media/TBOM_5.jpg" style="width:66.666%">
   </div>
 
-  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+  <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
 </div>  
       <p class="caption"><a href="http://www.maskandwig.com/">The Mask and Wig Club</a>: Directed by Matt Peiffer, Set Design by Adam Riggar, Photos by Ethan Wu.</p></br>
      </div>
      <div>
       <a class="show">Fantastic Mr. Fox</a></br>
       <a class="position">Master Carpenter - Spring 2018</a></br>
-      <IMG SRC="/media/FMF_1.jpg" style="width:40%"><IMG SRC="/media/FMF_2.jpg" style="width:20%"><IMG SRC="/media/FMF_3.jpg" style="width:40%">
 <div class="slideshow-container">
   <div class="mySlides4">
     <img SRC="/media/FMF_1.jpg"style="width:100%">
@@ -230,8 +229,8 @@ img {vertical-align: middle;}
     <img SRC="/media/FMF_3.jpg" style="width:100%">
   </div>
 
-  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+  <a class="prev" onclick="plusSlides(-1, 3)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 3)">&#10095;</a>
 </div> 
       <p class="caption"><a href="https://stimuluschildrenstheatre.wordpress.com/">Stimulus Children's Theater</a>: Directed by Jaws Calderon, Set Design by Sabina Lowitt.</p></br>
      </div>
@@ -307,10 +306,12 @@ function dropdown() {
   }
 }
 
-var slideIndex = [1,1];
+var slideIndex = [1,1,1,1];
 var slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4"]
 showSlides(1, 0);
 showSlides(1, 1);
+showSlides(1, 2);
+showSlides(1, 3);
 
 function plusSlides(n, no) {
   showSlides(slideIndex[no] += n, no);
