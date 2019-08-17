@@ -67,7 +67,7 @@ img {vertical-align: middle;}
 
 <!-- Navbar (sit on top) -->
 <!-- Navbar (sit on top) -->
-<div class="w3-top">
+<div class="w3-top" id="navbar">
   <div class="w3-bar w3-white w3-card" id="myNavbar">
       <a href="/about" class="w3-bar-item w3-button w3-hover-text-orange w3-hover-white" style="color:dimgrey"><i class="fas fa-address-book"></i></i> ABOUT ME</a>
       <a href="/resume" class="w3-bar-item w3-button w3-hover-text-purple w3-hover-white" style="color:dimgrey"><i class="fas fa-file-alt"></i> RESUME</a>
@@ -91,7 +91,7 @@ img {vertical-align: middle;}
     </div>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a class="w3-bar-item w3-hover-text-blue w3-hover-white">J. NICK SEYMOUR</a>
+      <a class="w3-bar-item w3-hover-text-blue w3-hover-white" href="https://jnickseymour.com">J. NICK SEYMOUR</a>
    </div>
  </div>
 </div>
@@ -333,7 +333,16 @@ function showSlides(n, no) {
   }
   x[slideIndex[no]-1].style.display = "block";  
 }
-
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
 </script>
 
 
