@@ -22,7 +22,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Cairo", sans-serif}
 .caption {color: hsl(120, 80%, 20%)}
 .skill {text-shadow: 2px 2px hsl(120, 80%, 80%)}
 * {box-sizing: border-box}
-.mySlides1, .mySlides2, .mySlides3, .mySlides4, {display: none}
+.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, {display: none}
 img {vertical-align: middle;}
 
 /* Slideshow container */
@@ -181,6 +181,26 @@ img {vertical-align: middle;}
 </div>      
       <p class="caption"><a href="http://www.maskandwig.com/">The Mask and Wig Club</a>: Directed by Brenden Talliaferro, Photos by Ethan Wu. <a href="https://www.flickr.com/photos/ethandwu/albums/72157696776361580/with/45402443822/">More Photos</a></p></br>
      </div>
+     <div>
+      <a class="show">Hamlet</a></br>
+      <a class="position">Set Design - Spring 2018</a></br> 
+<div class="slideshow-container">
+  <div class="mySlides5">
+    <img SRC="/media/Hamlet_1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides5">
+    <img SRC="/media/Hamlet_2.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+</div>
+<div class="videoWrapper">
+    <iframe title="Hamlet Design" width="684" height="486" src="https://sketchfab.com/models/ac25a9a67523421aa26f51a1a4fce8ab/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>      
+      <p class="caption"><a href="https://theatre.sas.upenn.edu/thar-130-introduction-theatre-design-illustrated-syllabus">THAR 130</a>: Introduction to Theatre Design</p></br>
+     </div>
    </div>
    <div>
     <a class="skill"><i class="fas fa-hammer"></i> Carpentry</a>
@@ -312,12 +332,13 @@ function dropdown() {
   }
 }
 
-var slideIndex = [1,1,1,1];
-var slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4"]
+var slideIndex = [1,1,1,1,1];
+var slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5"]
 showSlides(1, 0);
 showSlides(1, 1);
 showSlides(1, 2);
 showSlides(1, 3);
+showSlides(1, 4);
 
 function plusSlides(n, no) {
   showSlides(slideIndex[no] += n, no);
