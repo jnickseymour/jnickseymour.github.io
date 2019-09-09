@@ -263,13 +263,47 @@ img {vertical-align: middle;}
      <div>
       <a class="show">Juice Box Hero</a></br>
       <a class="position">Set Crew - Spring 2018</a></br>   
-      <IMG SRC="/media/JBH_1.jpg" style="width:100%">
+<div class="slideshow-container">
+  <div class="mySlides6">
+    <img SRC="/media/JBH_1.jpg" class="center" style="width:100%">
+  </div>
+
+  <div class="mySlides6">
+    <img SRC="/media/JBH_2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides6">
+    <img SRC="/media/JBH_3.jpg" class="center" style="width:100%">
+  </div>
+  
+  <div class="mySlides6">
+    <img  SRC="/media/JBH_4.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 5)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 5)">&#10095;</a>
+</div>  
       <p class="caption"><a href="http://www.maskandwig.com/">The Mask and Wig Club</a>: Directed by Matt Peiffer, Set Design by Adam Riggar. <a href="https://www.facebook.com/TheMaskandWigClub/photos/?tab=album&album_id=1806206312785126">More Photos by Ethan Wu</a>.</p></br>
      </div>
      <div>
       <a class="show">I Am What I Amazon</a></br>
       <a class="position">Set Crew - Fall 2017</a></br> 
-      <IMG SRC="/media/IAWIA_1.jpg" style="width:100%">
+      <div class="slideshow-container">
+  <div class="mySlides7">
+    <img SRC="/media/IAWIA_1.jpg" class="center" style="width:100%">
+  </div>
+
+  <div class="mySlides7">
+    <img SRC="/media/IAWIA_2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides7">
+    <img SRC="/media/IAWIA_3.jpg" class="center" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 6)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 6)">&#10095;</a>
+</div> 
       <p class="caption"><a href="http://www.maskandwig.com/">The Mask and Wig Club</a>: Set Design by Gabe Mickel, Photo by Ethan Wu.</p></br>
      </div>
      <div>
@@ -333,12 +367,14 @@ function dropdown() {
 }
 
 var slideIndex = [1,1,1,1,1];
-var slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5"]
+var slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5","mySlides6","mySlides7"]
 showSlides(1, 0);
 showSlides(1, 1);
 showSlides(1, 2);
 showSlides(1, 3);
 showSlides(1, 4);
+showSlides(1, 5);
+showSlides(1, 6);
 
 function plusSlides(n, no) {
   showSlides(slideIndex[no] += n, no);
