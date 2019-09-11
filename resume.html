@@ -22,6 +22,29 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Cairo", sans-serif}
 .caption {color: hsl(300, 80%, 20%)}
 .skill {text-shadow: 2px 2px hsl(300, 80%, 80%)}
 
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  color: #444;
+  cursor: pointer;
+  padding: 4px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ffdbff;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+}
+
 </style>
 
 </head>
@@ -30,7 +53,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Cairo", sans-serif}
 <!-- Navbar (sit on top) -->
 <!-- Navbar (sit on top) -->
 <div class="w3-top" id="navbar">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
+ <div class="w3-bar w3-white w3-card" id="myNavbar">
       <a href="/about" class="w3-bar-item w3-button w3-hover-text-orange w3-hover-white" style="color:dimgrey"><i class="fas fa-address-book"></i></i> ABOUT ME</a>
       <a href="/resume" class="w3-bar-item w3-button w3-hover-text-purple w3-hover-white" style="color:dimgrey"><i class="fas fa-file-alt"></i> RESUME</a>
        <div class="w3-hide-small w3-hide-medium w3-dropdown-hover">
@@ -62,186 +85,184 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Cairo", sans-serif}
 <div class="w3-container-ns" id="about">
  <div>
   <div class="w3-card w3-pale-purple w3-animate-zoom" id="home">
-    <h3 class="w3-center">RESUM&Eacute;</h3>
-    <p class="w3-center w3-large">Resum&eacute; is not yet available. Click the links below to view portfolio:<br>
+    <h3 class="w3-center">RESUME</h3>
+    <p class="w3-center w3-large"><a href="/media/jnickseymour_resume.pdf" class="w3-bar-item w3-button w3-hover-text-blue w3-hover-none"><i class="fas fa-file-download"></i>  Download a printable copy (PDF)</a></br>
+Click the links below to view portfolio:<br>
     <a href="/portfolio/highlights" class="w3-bar-item w3-button w3-hover-text-blue w3-hover-none"><i class="fas fa-star"></i>  Highlights</a> | <a href="/portfolio/lighting" class="w3-bar-item w3-button w3-hover-text-amber w3-hover-none"><i class="fa fa-lightbulb"></i>  Lighting</a> | <a href="/portfolio/set" class="w3-bar-item w3-button w3-hover-text-green w3-hover-none"><i class="fas fa-hammer"></i> Set</a> | <a href="/portfolio/audio-video" class="w3-bar-item w3-button w3-hover-text-red w3-hover-none"><i class="fas fa-play-circle"></i> Film & Audio</a></p>
   </div>
+ </div>
 <!-- Education -->
-   <div>
-    <a class="skill w3-hover-text-amber" style="text-decoration:none"><i class="fas fa-graduation-cap"></i> Education</a>
-     <div>
-<!-- Web? -->
-   <div>
-    <a class="skill w3-hover-text-amber" style="text-decoration:none"><i class="fas fa-laptop-code"></i> Web?</a>
-     <div>
-<!-- Lighting -->
-   <div>
-    <a class="skill w3-hover-text-amber" style="text-decoration:none" href="/portfolio/lighting"><i class="fa fa-lightbulb"></i> Lighting</a>
-     <div>
-      <a class="show">Harry Potter</a></br>
-      <a class="position">Lead Lighting Designer, Projections - Fall 2018</a></br> 
-      <p class="caption">View More.</p></br>
-     </div>
-     <div>
-      <a class="show">Legacy</a></br>
-      <a class="position">Lead Lighting Designer, Projections - Spring 2018</a></br>
-      <p class="caption">View More.</p></br>
-     </div>
-     <div>
-      <a class="show">Willy Wonka</a></br>
-      <a class="position">Lead Lighting Designer, Projections - Fall 2017</a></br>
-      <p class="caption">View More.</p></br>
-     </div>
-     <div>
-      <a class="show" href="https://www.intuitons.org/">iNtuitions Experimental Theatre</a></br>
-      <a class="position">Lights Crew: Hedwig and the Angry Inch - Winter 2019</a>
-     </div>
-     </br>
-     <div>
-      <a class="show" href="https://strictlyfunk.org/">Strictly Funk Dance Company</a></br>
-      <a class="position">Lead Lighting Designer: Gotham City - Spring 2017, Inception - Fall 2016 </br>Lighting Designer: Atlantis - Spring 2016, Ka - Fall 2015</a>
-     </div>
-     </br>
-     <div>
-      <a class="show" href="https://www.penncounterparts.com/">Counterparts</a></br>
-      <a class="position">Lighting Assistant: Creep (Music Video)- Spring 2016</a>
-     </div>
-     </br>
-     <div>
-      <a class="show" href="http://www.maskandwig.com/">The Mask and Wig Club</a></br>
-      <a class="position">Follow Spot Op: Flight Club - Spring 2016</br>Lighting Designer: No Country For Old Penn - Fall 2015</a>
-     </div>
-     </br>
-    </br>
-   </div>
-<!-- Set -->
-   <div>
-    <a class="skill w3-hover-text-green w3-hover-white" style="text-decoration:none" href="/portfolio/set"><i class="fas fa-pencil-ruler"></i> Set Design</a>
-     <div>
-      <a class="show">I Am a Ghost</a></br>
-      <a class="position">Set Designer, Crew - Spring 2019</a></br>
-      <p class="caption"><a href="https://www.intuitons.org/">iNtuitions Experimental Theatre</a>:  Directed by Sean Begane, Master Carpenter Cat Grant.<p>
-     </div>
-     <div>
-      <a class="show">Peter and The Starcatcher</a></br>
-      <a class="position">Set Designer, Crew - Fall 2018</a></br>
-      <p class="caption"><a href="http://www.quadramics.com/">Quadramics Theatre Company</a>: Directed by Elizabeth Maritnez, Master Carpenter Sabina Lowitt, Photo by Idil Demirdag.</p></br>
-     </div>
-     <div>
-      <a class="show">Apollo 13 Going on 30</a></br>
-      <a class="position">Set Designer, Master Carpenter - Fall 2018</a></br>
-      <p class="caption"><a href="http://www.maskandwig.com/">The Mask and Wig Club</a>: Directed by Brenden Talliaferro, Photos by Ethan Wu. <a href="https://www.flickr.com/photos/ethandwu/albums/72157696776361580/with/45402443822/">More Photos</a></p></br>
-     </div>
-   </div>
-   <div>
-    <a class="skill w3-hover-text-green w3-hover-white" style="text-decoration:none" href="/portfolio/set#carpentry"><i class="fas fa-hammer"></i> Carpentry</a>
-     <div>
-      <a class="show">Little Shop of Horrors</a></br>
-      <a class="position">Master Carpenter &amp; Puppeteer - Spring 2019</a></br>   
-      <p class="caption"><a href="http://www.quadramics.com/">Quadramics Theatre Company</a>: Directed by Susana Jaramillo, Set Design by Rowana Miller.</p></br>
-     </div>
-     <div>
-      <a class="show">The Book of Mermen</a></br>
-      <a class="position">Master Carpenter - Spring 2019</a></br>   
-      <p class="caption"><a href="http://www.maskandwig.com/">The Mask and Wig Club</a>: Directed by Matt Pieffer, Set Design by Adam Riggar, Photos by Ethan Wu.</p></br>
-     </div>
-     <div>
-      <a class="show">Fantastic Mr. Fox</a></br>
-      <a class="position">Master Carpenter - Spring 2018</a></br>
-      <p class="caption"><a href="https://stimuluschildrenstheatre.wordpress.com/">Stimulus Children's Theater</a>: Directed by Jaws Calderon, Set Design by Sabina Lowitt.</p></br>
-     </div>
-     <div>
-      <a class="show" href="http://www.maskandwig.com/">The Mask and Wig Club</a></br>
-      <a class="position">Set Crew: Juice Box Hero - Spring 2018, I Am What I Amazon - Fall 2017, No Place Like Rome - Spring 2017, Magic Mike &amp; Ike - Fall 2016, Flight Club - Spring 2016, No Country For Old Penn - Fall 2015</a>
-     </div>
-    </br>
-   </div>
-<!-- Film & Audio -->
-   <div>
-    <a class="skill w3-hover-text-red w3-hover-white" style="text-decoration:none" href="/portfolio/audio-video"><i class="fas fa-film"></i> Video Editing and Production</a>
-     <div>   
-     <a class="show">Mask and Wig's 129th Year</a></br>
-      <a class="position">Editor - Summer 2017</a></br>
-      <p class="caption"><a href="http://www.maskandwig.com/">The Mask and Wig Club</a>: Videography by the 2016-2017 company.</p></br>
-     </div>
-     <div>
-     <a class="show">Tiny Instruments EP 4: SHIVA</a></br>
-      <a class="position">Production Assistant - Summer 2017 </a>
-      <p class="caption">Directed by Josh Horowitz, Photography Direction by Tyler Burke.</p>
-     </div>
-   </div>
-   <div>
-    <a class="skill w3-hover-text-red w3-hover-white" style="text-decoration:none" href="/portfolio/audio-video#audio"><i class="fas fa-microphone-alt"></i> Theatrical and Studio Audio Editing and Production</a>
-     <div>
-      <a class="show">COMM 317: Podcasting and The Politics of Sound</a></br>
-      <a class="position">Writer, Engineer and Editor - Instructors: Aaron Shapiro and Waldo Aguilar - Spring 2019</a></br><br></br>
-       <audio controls>
-        <source src="/media/COMM317_Salary.mp3" type="audio/mpeg">
-        <source src="/media/COMM317_Salary.ogg" type="audio/ogg">
-Your browser does not support the audio element.
-       </audio>
-      <p class="caption-l">"President Guttmann's Salary Rising" - Assignment One: Create a two and a half minute "Vox Populi" podcast on a current news story.</p></br>
-       <audio controls>
-        <source src="/media/COMM317_Wake-up.mp3" type="audio/mpeg">
-        <source src="/media/COMM317_Wake-up.ogg" type="audio/ogg">
-Your browser does not support the audio element.
-       </audio>
-      <p class="caption-l">"News Wake-up Call" - Assignment Two: In a six minute examine and compare audio techniques over several episodes of two or more podcasts.</p></br>
-       <audio controls>
-        <source src="https://imghost.asc.upenn.edu/AudioSrv/3620_podcast/ep69/Playback_Final_Assignments.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-       </audio>
-      <p class="caption-l">Part one of <a href="https://podcast.asc.upenn.edu/2019/06/episode-69-playback-final-assignments/">Annenberg's 3620 Podcast, Ep. #69</a> "Acoustic Resources?" - Assignment 3: In teams of four create a 10-15 podcast segment related to the topic of the politics of sound discussed in the course. Segment produced with KK Brooks, Marta Closas, and Lindsay Stanley </p></br>
-     </div>
-     <div>
-      <a class="show">Bottoms on Top</a></br>
-      <a class="position">Studio Engineer - Fall 2017-Spring 2019</a>
-      <p class="caption">A <a href="https://www.thedp.com/page/bottoms-on-top-podcas"t>Daily Pennsylvanian Podcast</a>. Engineer for select episodes from seasons 1-4 hosted by John Holmes, Ian Jeong, Andreas Pavlou and Prakash Mishra. Camera op for episode 28 the Live Show! Recorded at <a href="http://writing.upenn.edu/wh/">The Kelly Writers House</a>.</p></br>
-     </div>
-     <div>
-      <a class="show">The Trillest</a></br>
-      <a class="position">Studio Engineer - Fall 2017-Spring 2019</a>
-      <p class="caption">A <a href="https://www.thedp.com/page/the-trillest-podcast">Daily Pennsylvanian Podcast</a>. Engineer for select episodes from seasons 1 and 2 hosted by Sia-Linda Lebbie.  Recorded at <a href="http://writing.upenn.edu/wh/">The Kelly Writers House</a> Wexler Studio.</p></br>
-     </div>
-     <div>
-      <a class="show">Two-Man One-Man</a></br>
-      <a class="position">Sound Designer - Summer 2017, Spring 2018</a></br>
-      <a class="caption-l">Philadelphia Fringe, <a><a class="caption-l"href="https://www.broadstreetreview.com/theater/comedysportz-presents-patrick-romano-and-benjamin-behrends-two-man-one-man#">ComedySportz Philly</a><a class="caption-l">, Edinburgh Fringe: Written and Performed by Patrick Romano and Benjamin Behrend.</a></br>
-     </div></br>
-     <div>
-      <a class="show">The Animal Therapy Podcast</a></br>
-      <a class="position">Studio Engineer &amp; Editor - Summer 2017</a>
-      <p class="caption">Editor and engineer for 7 episode series. Hosted by Becca Lambright and Emily Rush.  Recorded at <a href="http://writing.upenn.edu/wh/">The Kelly Writers House</a> Wexler Studio.</p></br>
-     </div>
-    </br>
-   </div>
-<!-- Stage Management --> 
-  <div>
-    <a class="skill"><i class="fas fa-clipboard-list"></i> Stage Management<a></br>
-     <a class="show">The Book of Mermen</a></br>
-      <a class="position">Stage Manager - Spring 2019</a></br>
-      <a class="caption-l" href="http://www.maskandwig.com/">The Mask and Wig Club</a><a class="caption-l">: Directed by Matt Peiffer.</a></br></br>
-     <a class="show">Apollo 13 Going on 30</a></br>
-      <a class="position">Stage Manager - Fall 2018</a></br>
-      <a class="caption-l" href="http://www.maskandwig.com/">The Mask and Wig Club</a><a class="caption-l">: Directed by Brenden Talliaferro. </a><a class="caption-l" href="https://www.flickr.com/photos/ethandwu/albums/72157696776361580/with/45402443822/">View Photos</a></br></br>
-     <a class="show">Mask &amp; Wig and Bloomers Present: Free Show</a></br>
-      <a class="position">Stage Manager - Summer 2018</a></br>
-      <a class="caption-l" href="http://www.maskandwig.com/">The Mask and Wig Club</a><a class="caption-l"> and </a><a class="caption-l" href="https://www.bloomerscomedy.org/">Bloomers Comedy</a><a class="caption-l">: Directed by Cameron Hellerman and Katie Marshall. Co-stage Managed with Devon Christeleit.</a></br></br>
-     <a class="show">1984</a></br>
-      <a class="position">Assistant Stage Manager - Spring 2018</a></br>
-      <a class="caption-l" href="https://theatre.sas.upenn.edu/">UPenn Theatre Arts Department</a><a class="caption-l">: Directed by Dr. James Schlatter, Stage Managed by Hannah Spear.</a></br></br>
-     <a class="show">Disney's High School Musical</a></br>
-      <a class="position">Assistant Stage Manager - Fall 2017</a></br>
-      <a class="caption-l" href="https://stimuluschildrenstheatre.wordpress.com/">Stimulus Children's Theater</a><a class="caption-l">: Directed by Priscilla Felton, Stage Managed by Susanna Jaramillo.</a></br></br>
-     <a class="show">I Am What I Amazon</a></br>
-      <a class="position">Assistant Stage Manager - Fall 2017</a></br>
-      <a class="caption-l" href="http://www.maskandwig.com/">The Mask and Wig Club</a><a class="caption-l">: Directed by Nico Carino, Stage Managed by Gabe Mickel.</a>
-   </div> 
+<div>
+    <a class="skill" style="text-decoration:none"><i class="fas fa-user-graduate"></i> Education</a>
+ <div>
+      <a class="show">University of Pennsylvania</a></br>
+   <button class="collapsible"><a class="position">Bachelor of Arts in Communications, <i>Magna cum laude</i> - May 2019 <i class="fas fa-chevron-down"></i></a></button>
+  <div class="content">
+   <ul>
+   <li>GPA: 3.63</li>
+   <li>Minors in Theater Arts and Gender, Sexuality, and Women’s Studies</li>
+   <li>William A. Levi Travel Fellowship (2018)</li>
+   <li>Dean’s List (2017-2018)</li>
+   <li>Carriage LGBTQ Senior Society, Member (2018-2019)</li>
+   <li>Student Technology Advisory Board (2016-2017)</li>
+   </ul>
+  </div>
+ </div>
+ <div>
+      <a class="show">Dreher High School</a></br>
+<button class="collapsible"><a class="position">South Carolina High School Diploma with Honors  - May 2015 <i class="fas fa-chevron-down"></i></a></button>
+  <div class="content">
+  <ul>
+   <li>GPA: 5.12</li>
+   <li>National Honor Society Member (2013-2015)</li>
+   <li>Christina Webb Scholarship for Student Leadership (2015)</li>
+   <li>National Merit Xerox Scholarship (2015)</li>
+   <li>Xerox Award for Innovation and Information Technology (2014)</li>
+   <li>Student Body Treasurer & Social Media Director (2013–2015), Class Treasurer (2011–2013)</li>
+   <li>Drama Club President (2014–2015), Tech Chief (2013–2015), International Thespian Society, Honors Member (2015)</li>
+   <li>Mock Trial Attorney (2011-2015), South Carolina Bar Mock Trial Scholarship (2015)</li>
+   <li>Gay Straight Alliance Founding Member (2013-2015)</li>
+   <li>US Academic Decathlon State Champion (2013 & 2014)</li>
+  </ul>
+  </div>
  </div>
 </div>
-</br>
-
+<!-- Media and Communication -->
+<div>
+    <a class="skill" style="text-decoration:none"><i class="fas fa-desktop"></i> Media and Communication</a>
+ <div>
+      <a class="show">Kelly Writers House</a></br>
+<button class="collapsible"><a class="position"><a class="position">Wexler Studio Assistant - Fall 2015 to Present <i class="fas fa-chevron-down"></i></a></button>
+  <div class="content">
+   <p>Wexler Studio Special Media Assistant (August 2019 - Present)</p>
+      <ul><li>Editing and html publishing of audio-video content for KWH programing and the PennSound archive</li>
+      </ul>  
+   <p>Wexler Studio Staffer (August 2015 - May 2019)</p>
+      <ul><li>Recorded, edited, and published audio and video for live, broadcast, and studio  readings and other programing</li>
+      </ul>
+   <p>Summer Media Intern (May - August 2017)</p>
+      <ul><li>Digitized, edited, and archived audio recordings from 20 years of KWH program tape</li>
+      </ul>
+  </div>
+ </div>
+ <div>
+      <a class="show">The Mask and Wig Club of the University of Pennsylvania</a></br>
+<button class="collapsible"><a class="position"><a class="position">Wexler Studio Assistant - Fall 2015 to Present <i class="fas fa-chevron-down"></i></a></button>
+  <div class="content">
+   <p>Digital Chair (September 2017- May 2019)</p>
+      <ul><li>Managed maskandwig.com, social media, advertising, and internal communication and technology systems</li>
+      </ul>
+   <p>Scribe (May 2017- April 2018)</p>
+      <ul><li>Managed records of club and production activities and some of its historical archives</li>
+      </ul>  
+  </ul>
+  </div>
+ <div>
+      <a class="show">University of South Carolina, Donor Communications and Stewardship</a></br>
+<button class="collapsible"><a class="position"><a class="position"> Communications Coordinator - May to August 2016 <i class="fas fa-chevron-down"></i></a></button>
+  <div class="content">
+  <ul>
+   <li>Coordinated, drafted, and scouted for video productions and aided website update and social media strategy</li>
+  </ul>
+  </div>
+ </div>
+ <p class="caption-l">To see editing and production work visit Portfolio <a href="/portfolio/audio-video">Audio & Video</a>.</p>
 </div>
+<!-- Theatrical Production and Design-->
+<div>
+    <a class="skill" style="text-decoration:none" ><i class="fas fa-theater-masks"></i> Theatrical Production and Design</a>
+ <div>
+      <a class="show">The Mask and Wig Club of the University of Pennsylvania </a></br>
+<button class="collapsible"><a class="position"><a class="position">Crew Member - September 2015 to May 2019 <i class="fas fa-chevron-down"></i></a></button>
+  <div class="content">
+  <ul>
+   <li>Constructed and transported of sets and props for bi-annual musical comedy productions and annual tours</li>
+   <li>Provided sound and lighting for stage productions and private event band and cast performances and concerts</li>
+   <li>Juice Box Hero, Set Crew, Tour Show Caller (Spring 2018)</li>
+   <li>I Am What I Amazon, Set Crew, Assistant Stage Manager (Fall 2017)</li>
+   <li>No Place Like Rome, Set Crew, Stage Hand (Spring 2017)</li>
+   <li>Magic Mike & Ike, Set Crew, Stage Hand(Fall 2016)</li>
+   <li>Flight Club, Spotlight Operator, Set Crew (Spring 2016)</li>
+   <li>No Country For Old Penn, Lighting Designer, Set Crew (Fall 2015)</li>
+  </ul>
+  </div>
+ </div>
+ <div>
+      <a class="show">Strictly Funk Dance Company</a></br>
+<button class="collapsible"><a class="position"><a class="position">Lighting Designer - Fall 2015 to Fall 2018 <i class="fas fa-chevron-down"></i></a></button>
+  <div class="content">
+  <ul>
+   <li>Provided lighting design, programing, rental management and technical needs for biannual productions</li>
+   <li>Harry Potter, Lead designer (Fall 2018)</li>
+   <li>Legacy, Lead designer (Spring 2018)</li>
+   <li>Willy Wonka, Lead designer (Fall 2017)</li>
+   <li>Legacy, Lead designer (Spring 2017)</li>
+   <li>Inception (Fall 2016)</li>
+   <li>Atlantis (Spring 2016)</li>
+   <li>Cirque du Soleil: Ka (Fall 2015)</li>
+  </ul>
+  </div>
+ </div>
+ <div>
+      <a class="show">UPenn Theatre Arts Council</a></br>
+<button class="collapsible"><a class="position"><a class="position">Designer and Technician - Fall 2017 to Spring 2019 <i class="fas fa-chevron-down"></i></a></button>
+  <div class="content">
+  <ul>
+   <li>High School Musical, Assistant Stage Manager - Stimulus Children’s Theatre Co. (Fall 2017)</li>
+   <li>Fantastic Mr. Fox, Master Carpenter - Stimulus Children’s Theatre Co. (Spring 2018)</li>
+   <li>Peter and The Starcatcher, Set Designer - Quadramics Theatre Co. (Fall 2018)</li>
+   <li>Hedwig and the Angry Inch, Lights Crew - iNtuitons Experimential Theatre Co. (Winter 2019)</li>
+   <li>Little Shop of Horrors,  Master Carpenter and Puppeteer - Quadramics Theatre Co. (Spring 2019)</li>
+   <li>I am a Ghost - Set Designer,  iNtuitons Experimental Theatre Co. (Spring 2019)</li>
+  </ul>
+  </div>
+ </div>
+ <p class="caption-l">To see theatrical work visit Portfolio: <a href="/portfolio/highlights">Highlights</a>, <a href="/portfolio/lighting">Lighting</a>, <a href="/portfolio/set">Set</a>, or <a href="/portfolio/audio-video#audio">Audio</a>.</p>
+</div>
+<!-- Patron Assistance and Hospitality -->
+<div>
+    <a class="skill" style="text-decoration:none" ><i class="fas fa-hands-helping"></i> Patron Assistance and Hospitality</a>
+ <div>
+      <a class="show">Kelly Writers House</a></br>
+<button class="collapsible"><a class="position"><a class="position">Programming Staff - Fall 2015 to Present <i class="fas fa-chevron-down"></i></a></button>
+  <div class="content">
+      <ul><li>Assisted with general House functions including cooking, cleaning, general hospitality</li>
+      </ul>  
+   <p>Programing Assistant (August 2019 – Present)</p>
+      <ul><li>Managing student staffers in public literary event food, technology, and reception preparation</li>
+      </ul>
+  </div>
+ </div>
+ <div>
+      <a class="show">1812 Productions</a></br>
+<button class="collapsible"><a class="position"><a class="position">Various Roles - May 2018 to Present <i class="fas fa-chevron-down"></i></a></button>
+  <div class="content">
+   <p>Summer Intern (May 2018 – August 2018))</p>
+      <ul><li>Performed administrative tasks in marketing, fundraising, box office management, and event planning</li>
+          <li>Assisted with technical production, educational outreach, script coverage, and auditions</li>
+      </ul>
+   <p>Open Captioning Operator (September 2018 – Present)</p>
+      <ul><li>Operating equipment for live captioning of performances in English and Spanish </li>
+      </ul>  
+   <p>Temporary House Manager (May 2019– Present)</p>
+      <ul><li>Managing volunteer ushers and assisting patrons in coordination with box office and technical staff</li>
+      </ul>  
+  </ul>
+  </div>
+ <div>
+      <a class="show">Burnette, Shutt & McDaniel, PA</a></br>
+<button class="collapsible"><a class="position"><a class="position">Temporary office runner June to August 2019 <i class="fas fa-chevron-down"></i></a></button>
+  <div class="content">
+  <ul>
+   <li>Provided support in client relations, delivery,  file management, and office upkeep for legal practice</li>
+  </ul>
+  </div>
+ </div>
+</div>
+</div>
+</div>
+</div>
+
 
 <!-- Footer -->
 <footer class="w3-center w3-padding-24 w3-flat-midnight-blue">
@@ -275,6 +296,22 @@ function dropdown() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
 </script>
 
 
