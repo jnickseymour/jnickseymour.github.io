@@ -274,7 +274,6 @@ body, html {height: 100%;line-height: 1.8;color: dimgrey;}
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
 }
 
 /* Tooltip text */
@@ -290,7 +289,7 @@ body, html {height: 100%;line-height: 1.8;color: dimgrey;}
   /* Position the tooltip text */
   position: absolute;
   z-index: 1;
-  bottom: 125%;
+  top: 105%;
   left: 50%;
   margin-left: -60px;
 
@@ -299,16 +298,15 @@ body, html {height: 100%;line-height: 1.8;color: dimgrey;}
   transition: opacity 0.3s;
 }
 
-/* Tooltip arrow */
 .tooltip .tooltiptext::after {
-  content: "";
+  content: " ";
   position: absolute;
-  top: 100%;
+  bottom: 100%;  /* At the top of the tooltip */
   left: 50%;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: #555 transparent transparent transparent;
+  border-color: transparent transparent black transparent;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
