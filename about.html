@@ -22,6 +22,43 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Cairo", sans-serif}
 .caption {color: hsl(30, 80%, 20%)}
 .skill {text-shadow: 2px 2px hsl(30, 80%, 80%)}
 
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 90px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 3px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: -45px;
+}
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;  /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 </style>
 
 </head>
@@ -75,16 +112,17 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Cairo", sans-serif}
       <a href="tel:+1 856-687-3519" class="w3-bar-item w3-button w3-hover-text-green w3-hover-none"><i class="fa fa-phone"></i>  Phone: +1 856-687-3519</a></br>
       <a href="mailto:j.nick.seymour@gmail.com? subject=Portfolio Inquiry" class="w3-bar-item w3-button w3-hover-text-red w3-hover-none"><i class="fa fa-envelope"></i> j.nick.seymour@gmail.com</a></br>
       <a href="https://www.linkedin.com/in/jnickseymour" target="_blank"  class="w3-bar-item w3-button w3-hover-text-blue w3-hover-none"><i class="fab fa-linkedin-in"></i> Linkedin</a></br>
-<a class="w3-bar-item w3-button w3-hover-none">Download Contact Card</a></br>
-<div class="tooltip"><a  href="/media/google-contact-card.csv"><i class="fab fa-google"></i></a>
+<a>Download Contact Card: </a>
+<span class="tooltip"><a href="/media/google-contact-card.csv"><i class="fab fa-google"></i> </a>
   <span class="tooltiptext">Google CSV</span>
-</div>
-<div class="tooltip"><a href="/media/outlook-contact-card.csv"><i class="fab fa-windows" ></a></i>
+</span> |
+<span class="tooltip"><a href="/media/outlook-contact-card.csv"> <i class="fab fa-windows" > </a></i>
   <span class="tooltiptext">Outlook CSV</span>
-</div>
-<div class="tooltip"><a  href="/media/apple-contact-card.vcf"><i class="fab fa-apple"></i></a>
-  <span class="tooltiptext">Apple iOS vCard</span>
-</div>
+</span> |
+<span class="tooltip"><a  href="/media/apple-contact-card.vcf"> <i class="fab fa-apple"></i></a>
+  <span class="tooltiptext">iOS vCard</span>
+</span>
+
 
      </p>
      <p class="w3-center w3-medium w3-hide-small w3-hide-medium" style="padding: 0px">
