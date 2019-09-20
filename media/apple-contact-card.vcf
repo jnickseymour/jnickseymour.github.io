@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Nick Seymour
+N:Seymour;Nick;;;
+item1.EMAIL;TYPE=INTERNET:jnickseymour@gmail.com
+item1.X-ABLabel:
+TEL;TYPE=CELL:(803) 738-6838
+item2.ADR:;;30 N 42nd St;Philadelphia;PA;19104;US
+item2.X-ABLabel:
+item3.URL:https\://jnickseymour.com/
+item3.X-ABLabel:homePage
+NOTE:vCard from jnickseymour.com\, see website for resume and portfolio\nLi
+ nkedin: https\://www.linkedin.com/in/jnickseymour
+END:VCARD
