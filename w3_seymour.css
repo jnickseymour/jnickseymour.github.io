@@ -270,7 +270,6 @@ body, html {height: 100%;line-height: 1.8;color: dimgrey;}
 #navbar a:hover {
   background-color: #ddd;
   color: black;
-}
 /* Tooltip container */
 .tooltip {
   position: relative;
