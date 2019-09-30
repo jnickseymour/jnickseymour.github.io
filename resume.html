@@ -22,6 +22,38 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Cairo", sans-serif}
 .caption {color: hsl(300, 80%, 20%)}
 .skill {text-shadow: 2px 2px hsl(300, 80%, 80%)}
 
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the buttons images */
+.cursor {
+  cursor: pointer;
+}
+/* Style the course buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 4px 6px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* Style the active class, and buttons on mouse-over */
+.active, {
+  color: dimgrey;
+}
+.btn:hover {
+  background-color: #666;
+  color: white;
+}
+
+.active,
+.demo:hover {}
+
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
   color: #444;
@@ -105,7 +137,72 @@ Click the links below to view portfolio:<br>
    <li>Dean’s List (2017-2018)</li>
    <li>Carriage LGBTQ Senior Society, Member (2018-2019)</li>
    <li>Student Technology Advisory Board (2016-2017)</li>
+   <li>Courses:</br>
+<div class="container" id="myDIV">
+      <button class="demo cursor btn" onclick="currentSlide(1)">Communications</button>
+      <button class="demo cursor btn" onclick="currentSlide(2)">Theatre Arts</button>
+      <button class="demo cursor btn" onclick="currentSlide(3)">Gender, Sexuality, and Women's Studies</button>
+      <button class="demo cursor btn" onclick="currentSlide(4)">Additional Courses</button>
+  
+  <div class="mySlides">
+<p>COMM 130 Mass Media & Society   
+COMM 123 Critical Approaches To Popular Culture       </br>
+COMM 210 Quantitative Research Methods In Communication     </br>
+COMM 217 Media In The 2016 Elect </br>
+COMM 245 Teens & Screens: Understanding Youth Media & Behavior  </br>
+GSWS 302 Queer Cinema: Queer Negativity </br>
+COMM 211 Media Activism Studies  </br>
+COMM 388 Ritual Communication  </br>
+COMM 313 Computational Text Analysis  </br>
+RELS 255 Media & Religion    </br>
+THAR 285 Presenting The Arts: Theatre Management    </br>
+COMM 226 Intro To Political Communications </br>
+COMM 301 Intr To Pol Economy Of Media  </br>
+CIMS 295 Topics Cultural Studies: Mobile Phone Cultures </br>  
+COMM 317 Podcastng & Politics of Sound  </br>
+COMM 441 Internet & Democracy </p> 
+  </div>
+
+  <div class="mySlides">
+<p>THAR 076 Theatre In Philadelphia </br>
+THAR 130 Intro To Light, Set, Costume </br>
+THAR 285 Presenting The Arts: Theatre Management  </br>  
+THAR 350 Rehearsal & Performance  </br>
+ENGL 068 The London Theatre Experience (Penn In London)     </br>     
+THAR 120 Introduction To Acting  </p>
+  </div>
+
+  <div class="mySlides">
+<p>GSWS 003 Intro To Queer Studies</br>
+THAR 279 Provocative Performance  </br>
+GSWS 096 Theories of Gender/Sexuality: Queer Politics </br>
+GSWS 302 Queer Cinema: Queer Negativity    </br>
+GSWS 002 Gender & Society    </br>
+GSWS 242 Science of Sex & Sexuality  </br>
+ENGL 096 Theories Gendr/Sexuality: Bodies, Art & Performance (Penn In London) </br>
+GSWS 090 Gender, Sexuality & Lit: Gender & Popular Culture  </br>
+GSWS 290 Topics of Gender/Sexualty/Literature: The Modern Queer Novel </p>
+  </div>
+    
+  <div class="mySlides">
+<p>MATH 104 AP Calculus (High School)    </br>
+PHYS 050, 091 AP Physics 1 & 2 (High School)  </br>
+GEOL 100 Intro To Geology    </br>
+SPAN 130 Intermediate Spanish I  </br>
+WRIT 039 Writing Seminar: Comics & Graphic Novels </br>
+PSCI 110 Comparative Politics  </br>
+PSYC 001 Intro To Experimental Psychology   </br>
+SPAN 140 Intermediate Spanish II </br>
+HIST 170 The American South    </br>
+SPAN 202 Advanced Spanish    </br>
+PHIL 015 Logic & Formal Reasoning  </br>
+PHYS 016 Energy, Oil & Global Warming  </br>
+FNAR 123 Drawing I    </p>
+  </div>
+</div></li>
    </ul>
+
+</div>
   </div>
  </div>
  <div>
@@ -124,7 +221,6 @@ Click the links below to view portfolio:<br>
    <li>Gay Straight Alliance Founding Member (2013-2015)</li>
    <li>US Academic Decathlon State Champion (2013 & 2014)</li>
   </ul>
-  </div>
  </div>
 </div>
 <!-- Media and Communication -->
@@ -320,6 +416,44 @@ for (i = 0; i < coll.length; i++) {
     } else {
       content.style.display = "block";
     }
+  });
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+var header = document.getElementById("myDIV");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
   });
 }
 
